@@ -1,0 +1,119 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+h1 {
+  text-align: center;
+  font-family: 'Brush Script MT', cursive;
+}
+h3{
+
+    text-align: center;
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.flip-card {
+  display:grid;
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  border-radius: 10px;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px ;
+
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 10px;
+
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+
+}
+
+.card-container{
+  background-color: #3a4250;
+  padding-top: 30px;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	text-align: center;
+	align-items: center;
+	justify-content: space-around;
+	padding-left: 20px;
+	padding-right: 20px;
+	grid-gap: 30px;
+  padding-bottom: 50px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width:600px){
+	.card-container{
+		display: grid;
+		grid-template-columns: auto;
+	}
+} 
+
+@media screen and (max-width: 1024px) and (min-width: 600px){
+	.card-container{
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+}
+
+.flip-card-back h1 {
+      font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.flip-card-back p {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.iconify {
+  display: block;
+
+padding-top: 5px;
+text-align: center;
+margin-left:auto;
+margin-right: auto;
+}
